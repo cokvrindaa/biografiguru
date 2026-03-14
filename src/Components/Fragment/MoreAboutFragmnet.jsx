@@ -1,6 +1,7 @@
 import Lanyard from "../Element/Lanyard/Lanyard/Lanyard.jsx";
 import SplitText from "../Element/SplitText.jsx";
 
+
 const handleAnimationComplete = () => {
   console.log("All letters have animated!");
 };
@@ -38,7 +39,7 @@ const MoreAboutFragment = () => {
           rootMargin="-100px"
           onLetterAnimationComplete={handleAnimationComplete}
         />
-
+       
       </div>
     </div>
   );
