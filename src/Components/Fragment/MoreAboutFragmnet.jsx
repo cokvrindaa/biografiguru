@@ -1,16 +1,24 @@
 import Lanyard from "../Element/Lanyard/Lanyard/Lanyard.jsx";
 import SplitText from "../Element/SplitText.jsx";
+import SpotlightCard from "../Element/SpotlightCard.jsx";
+import AnimatedContent from "../Element/AnimatedContent.jsx";
 
-
+import { useState } from "react";
 const handleAnimationComplete = () => {
   console.log("All letters have animated!");
+};
+
+const isi = {
+  deskirpsiBasic:
+    "Nyoman Hendra Adi Wijaya lahir di Singaraja pada tanggal 14 April 1983. Beliau merupakan seorang guru yang mengajar pelajaran Agama Hindu di SMK TI Bali Global Denpasar. Beliau memiliki pengalaman mengajar siswa selama 15 tahun. Selama kegiatan ajar mengajar, beliau dikenal dengan sosok yang santai, humoris, ramah. Beliau juga berperan dalam membimbing siswa untuk memahami nilai-nilai agama serta contoh penerapanya dalam kehidupan sehari-hari.",
+  latarBelakang: ""
 };
 
 const MoreAboutFragment = () => {
   return (
     <div className="w-full flex flex-col md:flex-row items-center gap-4 px-4">
-      <div className="w-full lg:w-[2000px] flex justify-center max-h-[600px] lg:max-h-full overflow-hidden">
-        <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} />
+      <div className="w-full lg:w-[2000px] flex justify-center max-h-[660px] lg:max-h-full overflow-hidden">
+        <Lanyard position={[0, 0, 11]} gravity={[0, -40, 0]} />
       </div>
       <div>
         <SplitText
@@ -26,9 +34,10 @@ const MoreAboutFragment = () => {
           rootMargin="-100px"
           onLetterAnimationComplete={handleAnimationComplete}
         />
+
         <SplitText
-          text={`Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, iure debitis? Sunt dolor adipisci ducimus nemo et mollitia exercitationem dolore vel? Harum quas sed, velit ab ut sit eligendi optio ad minus? Voluptatum commodi et sed voluptas unde quos amet laborum numquam natus voluptate minima delectus, totam ab eveniet omnis. Repudiandae maiores voluptatibus facere, similique odio esse sit eligendi asperiores numquam obcaecati, nam enim corrupti quis, eos qui modi quam quos blanditiis. Obcaecati id quidem distinctio quam sunt voluptatum sapiente molestias nemo cumque cum excepturi aspernatur aliquam molestiae quia magnam, ut nulla corporis alias optio voluptates temporibus veritatis. Optio, unde?`}
-          className="text-justify text-large md:text-lg font-Poppins lg:text-lg"
+          text={isi.deskirpsiBasic}
+          className="text-justify text-large md:text-lg font-Poppins lg:text-lg mb-5"
           delay={100}
           duration={0.6}
           ease="power3.out"
@@ -39,9 +48,50 @@ const MoreAboutFragment = () => {
           rootMargin="-100px"
           onLetterAnimationComplete={handleAnimationComplete}
         />
-       
+        <Card
+          text="Latar Belakang"
+          deskripsi={isi.deskirpsiBasic}
+        ></Card>
       </div>
     </div>
+  );
+};
+const Card = (props) => {
+  const { text, deskripsi } = props;
+  const [open, setOpen] = useState(false);
+
+  // menentukan batas karakter untuk preview
+  const previewText = deskripsi.substring(0, 90) + "...";
+
+  return (
+    <AnimatedContent
+      distance={100}
+      direction="vertical"
+      duration={1.2}
+      ease="power3.out"
+      initialOpacity={0.2}
+      animateOpacity
+      threshold={0.2}
+      delay={0.3}
+    >
+      <div onClick={() => setOpen(!open)} className="cursor-pointer">
+        <SpotlightCard
+          className="custom-spotlight-card relative flex flex-col gap-4 h-full p-6 transition-all duration-500"
+          spotlightColor="rgba(0, 229, 255, 0.2)"
+        >
+          <h2 className="text-white text-xl font-semibold">{text}</h2>
+          
+          {/* Jika dibuka, maka akan tampilkan deskirpsinya, jika tidak tampilkan preview saja */}
+          <p className="text-gray-400">
+            {open ? deskripsi : previewText}
+          </p>
+          {/* Jika di buka tampilkan less info, jika tidak tampilkan ore info */}
+          <div className="text-xs text-white font-Poppins font-semibold uppercase">
+            {open ? "Less info" : "More info "}
+          </div>
+        </SpotlightCard>
+      </div>
+    </AnimatedContent>
   );
 };
 

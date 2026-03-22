@@ -119,7 +119,7 @@ const Text = () => {
   return (
     <div>
       <BlurText
-        text="Haloo 👋,  nama saya"
+        text="Haloo 👋,  perkenalkan beliau"
         delay={150}
         animateBy="words"
         direction="top"

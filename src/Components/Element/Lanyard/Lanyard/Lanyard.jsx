@@ -206,7 +206,8 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
             onPointerUp={(e) => (
-              e.target.releasePointerCapture(e.pointerId), drag(false)
+              e.target.releasePointerCapture(e.pointerId),
+              drag(false)
             )}
             onPointerDown={(e) => (
               e.target.setPointerCapture(e.pointerId),
