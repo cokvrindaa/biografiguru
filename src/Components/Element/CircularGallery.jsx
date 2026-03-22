@@ -332,10 +332,10 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { image: `https://picsum.photos/seed/1/800/600?grayscale`, text: 'Bridge' },
-      { image: `https://picsum.photos/seed/2/800/600?grayscale`, text: 'Desk Setup' },
-      { image: `https://picsum.photos/seed/3/800/600?grayscale`, text: 'Waterfall' },
-      { image: `https://picsum.photos/seed/4/800/600?grayscale`, text: 'Strawberries' },
+      { image: `/portofolio25/image/pakhendra1.jpg`, text: ' '},
+      { image: `/portofolio25/image/pakhendra2.jpg`, text: '' },
+      { image: `/portofolio25/image/pakhendra3.jpg`, text: '' },
+      { image: `/portofolio25/image/pakhendra4.jpg`, text: 'Strawberries' },
       { image: `https://picsum.photos/seed/5/800/600?grayscale`, text: 'Deep Diving' },
       { image: `https://picsum.photos/seed/16/800/600?grayscale`, text: 'Train Track' },
       { image: `https://picsum.photos/seed/17/800/600?grayscale`, text: 'Santorini' },

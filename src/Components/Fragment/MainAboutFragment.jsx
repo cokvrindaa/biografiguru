@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
   faGithub,
-  faTiktok,
+  faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 import ProfileCard from "../Element/ProfileCard.jsx";
 
@@ -19,12 +19,12 @@ const MainAboutFragment = () => {
     <div className="flex flex-col lg:flex-row items-center justify-center  lg:gap-20  p-8">
       <div className="scale-60 md:scale-100 mt-[-10px] md:mt-0">
         <ProfileCard
-          name="Javi A. Torres"
+          name="Pak Hendra"
           title=""
           handle=""
           status=""
           contactText=""
-          avatarUrl="/portofolio25/image/tesw.png"
+          avatarUrl="/portofolio25/image/pakhendra.png"
           showUserInfo={false}
           enableTilt={true}
           enableMobileTilt={false}
@@ -38,15 +38,13 @@ const MainAboutFragment = () => {
       <div className="gap-3 flex items-center flex-col justify-center mt-2">
         <Text />
         <div className="gap-3 flex flex-row justify-center mt-2 lg:mt-2">
-          <Button link="https://www.instagram.com/cokvrindaaa/">
-            <FontAwesomeIcon icon={faInstagram} />
+          <Button link="https://www.facebook.com/hendra.adiw">
+            <FontAwesomeIcon icon={faFacebook} />
           </Button>
-          <Button link="https://github.com/cokvrindaa">
-            <FontAwesomeIcon icon={faGithub} />
+          <Button link="https://smkti-baliglobal.sch.id/halaman/stafguru">
+            <img src="/portofolio25/image/logoTI.png" alt="" className="w-5 invert brightness-0"/>
           </Button>
-          <Button link="https://www.tiktok.com/@cokvrindaa">
-            <FontAwesomeIcon icon={faTiktok} />
-          </Button>
+
         </div>
       </div>
     </div>
@@ -121,7 +119,7 @@ const Text = () => {
   return (
     <div>
       <BlurText
-        text="Haloo 👋, nama saya"
+        text="Haloo 👋,  nama saya"
         delay={150}
         animateBy="words"
         direction="top"
@@ -145,19 +143,19 @@ const Text = () => {
           colors={["#FFFF, #4079ff, #FFFF, #4079ff, #FFFF"]}
           animationSpeed={8}
           showBorder={false}
-          className=" text-[54px] font-bold lg:text-[70px]"
+          className=" text-[30px] text-center font-bold lg:text-[50px] "
         >
-          Cok Vrinda
+          Nyoman Hendra Adi Wijaya
         </GradientText>
       </AnimatedContent>
 
       <BlurText
-        text="Guru di SMK TI Bali Global Denpasar"
+        text="Guru agama di SMK TI Bali Global Denpasar"
         delay={150}
         animateBy="words"
         direction="top"
         onAnimationComplete={handleAnimationComplete}
-        className="text-[20px] text-center justify-center lg:text-[25px]  font-Poppins"
+        className="text-[20px] text-center justify-center lg:text-[25px] mt-3  font-Poppins"
       />
     </div>
   );

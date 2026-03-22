@@ -57,7 +57,7 @@ const NavBar = () => {
 };
 
 const Logo = () => {
-  return <p className="font-bold text-2xl font-Poppins cursor-pointer">@cokvrinda'25</p>;
+  return <p className="font-bold text-2xl font-Poppins cursor-pointer">@hendra'26</p>;
 };
 
 const Content = ({ text, to, onClick }) => {

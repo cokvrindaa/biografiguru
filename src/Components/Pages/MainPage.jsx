@@ -18,7 +18,7 @@ const MainPage = () => {
       <div id="tentang">
         <ScrollVelocity
           texts={[
-            "PROFESIONAL TEACHER - SINCE 2010",
+            "GURU AGAMA HINDU - SEJAK 2011",
             "SMK TI BALI GLOBAL DENPASAR",
           ]}
           className="custom-scroll-text font-Poppins"

@@ -118,7 +118,7 @@ const ChromaGrid = ({
           key={i}
           onMouseMove={handleCardMove}
           onClick={() => handleCardClick(c.url)}
-          className="group relative flex flex-col w-[260px] sm:w-[300px] lg:w-[360px] rounded-2xl overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.03]"
+          className="group relative flex flex-col w-[400px] sm:w-[300px] lg:w-[360px] rounded-2xl overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.03]"
           style={{
             background: "rgba(255,255,255,0.03)",
             border: "1px solid rgba(255,255,255,0.08)",
