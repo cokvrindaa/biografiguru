@@ -2,7 +2,7 @@ import MoreAboutFragment from "../Fragment/MoreAboutFragmnet";
 
 const MoreAbout = () => {
     return (
-     <div className="h-[190vh] p-8 lg:h-full ">
+     <div className="h-full p-8 lg:h-full ">
         <MoreAboutFragment></MoreAboutFragment>
         
 

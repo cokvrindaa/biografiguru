@@ -11,7 +11,9 @@ const handleAnimationComplete = () => {
 const isi = {
   deskirpsiBasic:
     "Nyoman Hendra Adi Wijaya lahir di Singaraja pada tanggal 14 April 1983. Beliau merupakan seorang guru yang mengajar pelajaran Agama Hindu di SMK TI Bali Global Denpasar. Beliau memiliki pengalaman mengajar siswa selama 15 tahun. Selama kegiatan ajar mengajar, beliau dikenal dengan sosok yang santai, humoris, ramah. Beliau juga berperan dalam membimbing siswa untuk memahami nilai-nilai agama serta contoh penerapanya dalam kehidupan sehari-hari.",
-  latarBelakang: ""
+  latarBelakang: `Menjadi seorang guru merupakan bagian dari perjalanan hidup yang beliau yakini sebagai karma. Pada masa SMK, beliau termasuk siswa yang cukup nakal dan sering membuat guru merasa kesal. Namun, kini beliau berada di posisi yang sama seperti mereka dahulu, sehingga memberikan beliau sudut pandang dan pemahaman yang berbeda. 
+    `,
+  kehidupan: ` Beliau berasal dari keluarga yang sederhana secara ekonomi. Meskipun demikian, beliau merasa bangga karena orang tua beliau tetap berusaha menyekolahkan beliau hingga jenjang SMK. Masa kecil beliau merupakan masa yang sangat menyenangkan, karena belum adanya teknologi seperti telepon genggam maupun media sosial, sehingga kehidupan terasa lebih sederhana.`
 };
 
 const MoreAboutFragment = () => {
@@ -38,7 +40,7 @@ const MoreAboutFragment = () => {
         <SplitText
           text={isi.deskirpsiBasic}
           className="text-justify text-large md:text-lg font-Poppins lg:text-lg mb-5"
-          delay={100}
+          delay={40}
           duration={0.6}
           ease="power3.out"
           splitType="words"
@@ -48,10 +50,8 @@ const MoreAboutFragment = () => {
           rootMargin="-100px"
           onLetterAnimationComplete={handleAnimationComplete}
         />
-        <Card
-          text="Latar Belakang"
-          deskripsi={isi.deskirpsiBasic}
-        ></Card>
+        <Card text="Latar Belakang" deskripsi={isi.latarBelakang}></Card>
+        <Card text="Kehidupan Pribadi" deskripsi={isi.latarBelakang}></Card>
       </div>
     </div>
   );
@@ -76,18 +76,18 @@ const Card = (props) => {
     >
       <div onClick={() => setOpen(!open)} className="cursor-pointer">
         <SpotlightCard
-          className="custom-spotlight-card relative flex flex-col gap-4 h-full p-6 transition-all duration-500"
+          className="custom-spotlight-card relative flex flex-col gap-4 mt-5 h-full p-6 transition-all duration-500"
           spotlightColor="rgba(0, 229, 255, 0.2)"
         >
           <h2 className="text-white text-xl font-semibold">{text}</h2>
-          
+
           {/* Jika dibuka, maka akan tampilkan deskirpsinya, jika tidak tampilkan preview saja */}
-          <p className="text-gray-400">
+          <p className="text-gray-400 text-justify whitespace-pre-line">
             {open ? deskripsi : previewText}
           </p>
           {/* Jika di buka tampilkan less info, jika tidak tampilkan ore info */}
           <div className="text-xs text-white font-Poppins font-semibold uppercase">
-            {open ? "Less info" : "More info "}
+            {open ? "Less info 🔼 " : "More info 🔽 "}
           </div>
         </SpotlightCard>
       </div>
