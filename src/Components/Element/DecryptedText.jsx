@@ -184,7 +184,7 @@ export default function DecryptedText({
   return (
     <motion.span
       ref={containerRef}
-      className={`inline-block whitespace-pre-wrap font-Poppins text-2xl mb-5  font-bold ${parentClassName}`}
+      className={`inline-block whitespace-pre-wrap font-Poppins text-center text-2xl mb-5  font-bold ${parentClassName}`}
       {...hoverProps}
       {...props}
     >
