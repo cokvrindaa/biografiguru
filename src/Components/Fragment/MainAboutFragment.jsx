@@ -143,7 +143,7 @@ const Text = () => {
           colors={["#FFFF, #4079ff, #FFFF, #4079ff, #FFFF"]}
           animationSpeed={8}
           showBorder={false}
-          className=" text-[30px] text-center font-bold lg:text-[50px] "
+          className=" text-[28px] text-center font-bold lg:text-[50px] "
         >
           Nyoman Hendra Adi Wijaya
         </GradientText>

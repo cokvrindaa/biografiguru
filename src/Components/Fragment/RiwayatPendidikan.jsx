@@ -61,8 +61,6 @@ const RiwayatPendidikanFragment = () => {
             ITB STIKOM Bali (S2) jurusan Sistem Informasi
           </p>
           <img src="/portofolio25/image/s2.png" className="h-40" alt="" />
-
-
         </div>
       ),
     },

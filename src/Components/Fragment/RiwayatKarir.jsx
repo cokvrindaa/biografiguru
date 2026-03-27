@@ -7,20 +7,19 @@ const RiwayatKarirFragment = () => {
   return (
     <div>
       <DecryptedText
-        text="Riwayat Karir"
+        text="Riwayat Karir dan Pengalaman"
         animateOn="view"
         revealDirection="center"
         className="font-Poppins text-2xl lg:text-4xl mx-auto font-bold  "
       />{" "}
       <p className="mt-[-5px] mb-4 text-sm lg:text-2xl lg:mb-5">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium,
-        excepturi, dengan {" "}
+        Pak Hendra adalah seorang guru yang memiliki  {" "}
           <CountUp
             from={0}
-            to={5}
+            to={15}
             separator=","
             direction="up"
-            duration={1}
+            duration={5}
             className="count-up-text font-Poppins font-bold"
             startCounting
           />
@@ -28,30 +27,29 @@ const RiwayatKarirFragment = () => {
       </p>
       <div className="flex flex-col gap-6 lg:grid lg:grid-cols-4 ">
         <Card
-          text="SD Negri Amba"
-          gambar={`/portofolio25/image/javascript.png`}
-          textisi="2007"
-          deskripsi = "Tes 1"
+          text="SMK TI Bali Global Singaraja"
+          gambar={`/portofolio25/image/logoTIHitam.png`}
+          textisi="2009-2011"
+          deskripsi = "Beliau pernah mengajar di SMK TI Bali Global Singaraja pada periode 2009 hingga 2011. Masa tersebut menjadi salah satu bagian penting dalam perjalanan karier beliau karena banyak pengalaman berharga yang diperoleh, baik dalam dunia pendidikan maupun dalam interaksi bersama siswa dan rekan kerja."
         ></Card>
         <Card
-          text="SMP Negri Amba"
-          gambar={`/portofolio25/image/php.png`}
-          textisi="2008"
-          deskripsi = "Tes 2"
-        ></Card>
-
-        <Card
-          text="SMA Negri Amba"
-          textisi="2009"
-          gambar={`/portofolio25/image/tailwindcss.png`}
-          deskripsi = "Tes 3"
+          text="SMK TI Bali Global Denpasar"
+          gambar={`/portofolio25/image/logoTIHitam.png`}
+          textisi="2011-sekarang"
+          deskripsi = "Dari tahun 2011 hingga saat ini, beliau mengajar di SMK TI Bali Global Denpasar. Beliau mengampu mata pelajaran Pendidikan Agama Hindu"
         ></Card>
 
         <Card
-          text="Amba Institut"
-          textisi="2010"
-          gambar={`/portofolio25/image/htmlcss.png`}
-          deskripsi ="tes 4"
+          text="Pelatihan public speaking"
+ 
+          gambar={`/portofolio25/image/santisastra.png`}
+          deskripsi = "Beliau pernah mengikuti pelatihan public speaking di Santy Sastra Denpasar sebagai upaya untuk meningkatkan kemampuan berbicara di depan umum."
+        ></Card>
+
+        <Card
+          text="Juara 1 festival lawak Se-Bali"
+          gambar={`/portofolio25/image/lawakbali.png`}
+          deskripsi ="Selain aktif mengajar, beliau juga pernah meraih Juara 1 Festival Lawak se-Bali bersama grup Rare Kual Singaraja. Prestasi tersebut menjadi salah satu kenangan berharga yang lahir dari kerja sama, kreativitas, dan semangat kebersamaan."
         ></Card>
       </div>
     </div>
@@ -95,7 +93,7 @@ const Card = (props) => {
           )}
 
           <div className="mt-2 text-xs text-white font-Poppins font-semibold">
-            {open ? "Less info " : "More info "}
+            {open ? "Info lebih sedikit🔼 " : "Info lebih lanjut 🔽 "}
           </div>
         </SpotlightCard>
       </div>

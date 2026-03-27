@@ -87,7 +87,7 @@ const Card = (props) => {
           </p>
           {/* Jika di buka tampilkan less info, jika tidak tampilkan ore info */}
           <div className="text-xs text-white font-Poppins font-semibold uppercase">
-            {open ? "Less info 🔼 " : "More info 🔽 "}
+            {open ? "Info lebih sedikit🔼 " : "Info lebih lanjut 🔽 "}
           </div>
         </SpotlightCard>
       </div>
