@@ -40,13 +40,13 @@ const KontakFragment = () => {
           name="name"
           required
           className="bg-gray-900 text-white px-4 py-2 rounded-xl font-Poppins placeholder:text-white"
-          placeholder="ketikan nama muu..."
+          placeholder="Ketik nama anda..."
         />
         <textarea
           name="message"
           required
           className="bg-gray-900 text-white px-4 py-2 rounded-xl font-Poppins placeholder:text-white h-60 resize-none"
-          placeholder="ketik pesann kamuu...."
+          placeholder="Ketik pesan anda...."
         ></textarea>
         <p className="font-Poppins font-semibold ml-1">{result}</p>
 

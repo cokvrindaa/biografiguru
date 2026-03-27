@@ -73,7 +73,7 @@ const PenulisFragment = () => {
         className="text-2xl lg:text-[35px] text-center justify-center font-Poppins font-bold  lg:text-5xl"
       />
       <BlurText
-        text="Kami dari kelompok 5 - X RPL 2 2025-2026"
+        text="Kelompok 5 | X RPL 2"
         delay={150}
         animateBy="words"
         direction="top"
