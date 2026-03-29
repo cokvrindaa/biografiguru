@@ -1,5 +1,6 @@
 import ChromaGrid from "../Element/ChromaGrid";
 import BlurText from "../Element/BlurText";
+import AnimatedContent from "../Element/AnimatedContent.jsx";
 
 const handleAnimationComplete = () => {
   console.log("Animation completed!");
@@ -8,7 +9,7 @@ const items = [
   {
     image: "https://i.pravatar.cc/300?img=2",
     title: "Dwija - 22",
-    subtitle: "Project Leader - ",
+    subtitle: "Project Leader - Merangkai kalimat ",
     handle: "",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
@@ -17,7 +18,7 @@ const items = [
   {
     image: "/portofolio25/image/CokVrinda.jpeg",
     title: "Cok Vrinda - 06",
-    subtitle: "Web Developer - ",
+    subtitle: "Web Developer - Merangkai kalimat",
     handle: "",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
@@ -25,8 +26,8 @@ const items = [
   },
   {
     image: "https://i.pravatar.cc/300?img=2",
-    title: "Bagas - ",
-    subtitle: "Backend Engineer",
+    title: "Bagas - 16",
+    subtitle: "Merangkai kalimat",
     handle: "",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
@@ -34,8 +35,8 @@ const items = [
   },
   {
     image: "https://i.pravatar.cc/300?img=2",
-    title: "Albina - ",
-    subtitle: "Backend Engineer",
+    title: "Albina - 25",
+    subtitle: "Wawancara",
     handle: "",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
@@ -43,8 +44,8 @@ const items = [
   },
   {
     image: "https://i.pravatar.cc/300?img=3",
-    title: "Sima - ",
-    subtitle: "Backend Engineer",
+    title: "Sima - 11",
+    subtitle: "Wawancara",
     handle: "",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
@@ -52,8 +53,8 @@ const items = [
   },
   {
     image: "https://i.pravatar.cc/300?img=2",
-    title: "Rama - ",
-    subtitle: "Backend Engineer",
+    title: "Rama - 34",
+    subtitle: "Merangkai kalimat",
     handle: "",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
@@ -80,15 +81,17 @@ const PenulisFragment = () => {
         onAnimationComplete={handleAnimationComplete}
         className="text-2xl lg:text-[20px] text-center justify-center font-Poppins mt-4 mb-20 "
       />
-      <div style={{ height: "600px", position: "relative" }}>
-        <ChromaGrid
-          items={items}
-          radius={300}
-          damping={0.45}
-          fadeOut={0.6}
-          ease="power3.out"
-        />
-      </div>
+      <AnimatedContent>
+        <div style={{ height: "600px", position: "relative" }}>
+          <ChromaGrid
+            items={items}
+            radius={300}
+            damping={0.45}
+            fadeOut={0.6}
+            ease="power3.out"
+          />
+        </div>
+      </AnimatedContent>
     </div>
   );
 };

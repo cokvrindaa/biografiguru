@@ -6,10 +6,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const AnimatedContent = ({
   children,
-  distance = 100,
+  distance = 150,
   direction = "vertical",
   reverse = false,
-  duration = 0.8,
+  duration = 1,
   ease = "power3.out",
   initialOpacity = 0,
   animateOpacity = true,

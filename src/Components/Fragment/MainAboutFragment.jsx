@@ -18,22 +18,24 @@ const MainAboutFragment = () => {
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center  lg:gap-20  p-8">
       <div className="scale-60 md:scale-100 mt-[-10px] md:mt-0">
-        <ProfileCard
-          name="Pak Hendra"
-          title=""
-          handle=""
-          status=""
-          contactText=""
-          avatarUrl="/portofolio25/image/pakhendra.png"
-          showUserInfo={false}
-          enableTilt={true}
-          enableMobileTilt={false}
-          onContactClick={() => console.log("Contact clicked")}
-          behindGlowColor="rgba(125, 190, 255, 0.67)"
-          iconUrl="/portofolio25/image/logoTI.png"
-          behindGlowEnabled
-          innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
-        />
+        <AnimatedContent>
+          <ProfileCard
+            name="Pak Hendra"
+            title=""
+            handle=""
+            status=""
+            contactText=""
+            avatarUrl="/portofolio25/image/pakhendra.png"
+            showUserInfo={false}
+            enableTilt={true}
+            enableMobileTilt={false}
+            onContactClick={() => console.log("Contact clicked")}
+            behindGlowColor="rgba(125, 190, 255, 0.67)"
+            iconUrl="/portofolio25/image/logoTI.png"
+            behindGlowEnabled
+            innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
+          />
+        </AnimatedContent>
       </div>
       <div className="gap-3 flex items-center flex-col justify-center mt-2">
         <Text />
@@ -42,9 +44,12 @@ const MainAboutFragment = () => {
             <FontAwesomeIcon icon={faFacebook} />
           </Button>
           <Button link="https://smkti-baliglobal.sch.id/halaman/stafguru">
-            <img src="/portofolio25/image/logoTI.png" alt="" className="w-5 invert brightness-0"/>
+            <img
+              src="/portofolio25/image/logoTI.png"
+              alt=""
+              className="w-5 invert brightness-0"
+            />
           </Button>
-
         </div>
       </div>
     </div>
